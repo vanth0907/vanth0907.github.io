@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://www.jq22.com/jquery/vue.min.js"></script>
+    <script src="./js.js"></script>
+</head>
+
+<body>
+    <div class="box1">小家伙,我会一直陪着你。</div>
+    <div class="qwq">
+        <h3>老婆也太好看了叭</h3>
+        <div id="app">
+            <div class="box">
+                <!--<button @click="imgMove">点击</button>-->
+                <div class="main clearfix" @mouseover="btnOpen" @mouseout="btnHide">
+                    <div class="minMain">
+                        <div class="item" v-for="(item,index) in list" :key="index">
+                            <img :src="item.imgUrl" />
+                        </div>
+                    </div>
+                    <div class="btnMain" v-show="btnShow">
+                        <div class="left" @click="leftClick">
+                            <img src="img/ljiantou.png" />
+                        </div>
+                        <div class="right" @click="rightClick">
+                            <img src="img/rjiantou.png" />
+                        </div>
+                    </div>
+                    <div class="pressMain">
+                        <span v-for="(item,index) in pressList" :class="{active:item.isShow}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        qwq()
+    </script>
+</body>
+
+</html>
