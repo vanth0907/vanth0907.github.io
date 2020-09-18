@@ -221,3 +221,7 @@ h4 {
     font-weight: normal;
     color: skyblue;
 }
+
+p {
+    display: none;
+}
